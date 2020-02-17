@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.billDetails.BillListActivity">
+
+    <RelativeLayout
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/app_bg"
+        android:id="@+id/rlBillHeader"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <ImageView
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:id="@+id/imgVwAddCustomerBillABL"
+            android:background="@drawable/add_user"
+            android:layout_width="25dp"
+            android:layout_height="25dp"/>
+
+        <TextView
+            android:textColor="@android:color/white"
+            android:textSize="16dp"
+            android:layout_marginRight="10dp"
+            android:layout_centerInParent="true"
+            android:text="@string/bill_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/rlBillHeader"
+        android:layout_width="0dp"
+        android:layout_height="0dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rVwBillCustomerListAM"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+             />
+
+        <TextView
+            android:visibility="gone"
+            android:textColor="@color/app_bg"
+            android:textSize="20sp"
+            android:layout_centerInParent="true"
+            android:text="@string/bill_list_not_found"
+            android:id="@+id/tvBillDataNotFound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
